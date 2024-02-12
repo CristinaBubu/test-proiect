@@ -175,3 +175,46 @@
         width: 360px;
     }
 }
+
+.slideshow-container {
+    
+    position: relative;
+    margin: auto;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 32px 4px;
+    background-color: #717171;;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color width border-radius 0.3s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #FD9222;
+    width: 30px;
+    border-radius: 10px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
