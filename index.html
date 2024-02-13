@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/top-sellers.css" />
     <link rel="stylesheet" href="./css/reviews.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!--Top sellers-->
@@ -80,7 +84,7 @@
         <h3 class="section-header">
           <spam class="section-header-span">CHOCOLATE</spam> IS LOVE
         </h3>
-        <div class="slider-wrapper slideshow-container">
+        <div class="swipper-review slider-wrapper slideshow-container">
           <div class="slide-item mySlides fade">
             <div class="img-name-div">
               <img
@@ -210,6 +214,7 @@
           <span class="dot" onclick="currentSlide(2)"></span>
           <span class="dot" onclick="currentSlide(3)"></span>
           <span class="dot" onclick="currentSlide(4)"></span>
+          <div class="swiper-pagination-r rev"></div>
         </div>
         <button type="button" class="review-button">Leave a review</button>
       </div>
@@ -228,7 +233,7 @@
         <button class="subscribe-button" type="button">Subscribe</button>
       </div>
     </section>
-    <script src="./js/modal.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
-  <script src="./js/modal.js"></script>
 </html>

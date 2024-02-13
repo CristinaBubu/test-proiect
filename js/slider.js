@@ -1,28 +1,38 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+const swiper = new Swiper('.swipper-review', {
+  slidesPerView: 1,
+  spaceBetween: 16,
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+  pagination: {
+    el: '.swiper-pagination-r',
+    clickable: true, 
+  },
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+ 
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+  },
+
+  on: {
+    init() {
+      this.el.addEventListener('mouseenter', () => {
+        this.autoplay.stop();
+      });
+
+      this.el.addEventListener('mouseleave', () => {
+        this.autoplay.start();
+      });
+    },
+  },
+});
