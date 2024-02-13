@@ -199,29 +199,23 @@
 
 
 
+
 .swipper-review.rev {
     position: relative;
     padding-bottom: 45px;
     text-align: center;
 }
 
-.swiper-rreview.rev .swiper-pagination-r {
+.swipper-review.rev .swiper-pagination-r {
     width: 100%;
     position: absolute;
     bottom: 0;
 }
 
-
-
-
 .swiper-pagination-r .swiper-pagination-bullet {
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    margin: 0 auto;
-    display: inline-flex;
-    justify-content: center;
-
 }
 
 .swiper-pagination-r .swiper-pagination-bullet-active {
@@ -229,5 +223,4 @@
     width: 28px;
     height: 13px;
     border-radius: 13px;
-    margin: 0 auto;
 }
