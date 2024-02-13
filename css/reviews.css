@@ -205,7 +205,11 @@
     text-align: center;
 }
 
-
+.swiper-rreview.rev .swiper-pagination-r {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
 
 
 
